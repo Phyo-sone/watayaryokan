@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/*# sourceMappingURL=style.css.map */
+
+/*--共通CSS--*/
+@import "mixins/prepends";
+@import "mixins/variables";
+@import "mixins/common";
+
+/*--プロジェクトごとのCSSは以下にimport--*/
+@import "global-header";
+@import "footer";
+// @import "footer";
+
+/*---------------------*/
+
+
+
+@import "module/switch.scss";
+@import "module/toppage.scss";
+@import "module/about.scss";
+
+
+

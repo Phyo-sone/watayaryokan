@@ -1,0 +1,792 @@
+body{
+  background-image: url(../img/bg.png);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  max-width: 1980px;
+margin:0 auto;
+
+}
+.main-visual-content{
+  margin-top: -200px;
+  padding-left: 56px;
+  padding-right: 56px;
+  padding-top: 20px;
+  position: relative;
+  @include mediaM{
+    margin-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .mv-img{
+    z-index: 0;
+
+      width: 100%;
+      img{
+          width: 100%;
+      }
+  }
+
+  
+}
+
+
+.main-visual-content::before{
+  content:"";
+  background-image: url(../img/mv-wave.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 700px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  z-index: 2;
+
+  @include mediaM{
+    background-image: url(../img/mv-wave.png);
+    width: 100%;
+    height: 129px;
+    left: -10px;
+
+  }
+
+    }
+
+    .fixed_btn { 
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      margin-left: 56px;
+      z-index: 9999;
+      margin-bottom: 30px;
+      @include mediaM{
+   margin-left: 0;
+     width: 90%;
+     max-width: 320px;
+      }
+
+    
+      }
+    
+    
+   
+   
+    
+    
+    
+    .fixed-button-flex{
+      background-image: url(../img/white-bg.png);
+border-radius: 4px;
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 82px;
+      width: 362px;
+      padding-left: 20px;
+      padding-right: 20px;
+    // border-top-right-radius: 10px;
+    // position: relative;
+    // z-index: 99999 !important;
+    border-top: 4px solid $purple;
+    border-bottom: 4px solid $purple;
+    @include mediaM{
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100%;
+  
+      height: 66px;
+    }
+    }
+    
+
+    .pop{
+      // width: 120px;
+    width: calc(100% / 3);
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: $black ;
+      @include mediaM{
+        font-size: 14px;
+      }
+    }
+    
+    .pop{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    img{
+    display: block;
+    width: 21px;
+    margin-bottom: 10px;
+    @include mediaM{
+      width: 16px;
+    }
+    // margin-bottom: 10px;
+    }
+    }
+    
+    .tel-pop-wrapper{
+      position: relative;
+    }
+    .tel-pop-wrapper::after{
+      content:"";
+      width: 1px;
+      height: 46px;
+      position: absolute;
+      right: -3px;
+      background-color:$purple;
+      top: 0;
+      @include mediaM{
+        height: 30px;
+      }
+    
+    }
+
+        
+    .line-pop-wrapper{
+      position: relative;
+    }
+    .line-pop-wrapper::after{
+      content:"";
+      width: 1px;
+      height: 46px;
+      position: absolute;
+      right: -3px;
+      background-color:$purple;
+      top: 0;
+    @include mediaM{
+      height: 30px;
+    }
+    }
+
+
+
+    /////紹介
+
+  .introduction-section{
+    padding-right: 80px;
+    @include mediaM{
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .intro-wrapper{
+      .intro-flex{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        @include mediaM{
+          display: block;
+        }
+        .intro-img{
+          width: 60%;
+          @include mediaM{
+            width: 100%;
+          }
+          .main-intro-wrapper{
+            display: flex;
+            justify-content: start;
+          }
+          .main-intro{
+            width: 70%;
+
+
+          }
+          .sub-intro2-wrapper{
+            margin-top: -50px;
+            display: flex;
+            justify-content: end;
+            img{
+              width: 40%;
+            }
+
+          }
+          .sub-intro3-wrapper{
+            margin-top: -60px;
+            display: flex;
+            justify-content: start;
+            img{
+              width: 50%;
+              padding-left: 30px;
+            }
+          }
+        }
+        .intro-text{
+          padding-top: 30px;
+          width: 40%;
+          @include mediaM{
+            width: 100%;
+          }
+
+          .intro-ttl{
+
+            text-align: center;
+            background-image: url(../img/logomark.png);
+width: 100%;
+height: 120px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            h1{
+              padding-top: 30px;
+              color: $purple;
+              font-size: 30px;
+              font-weight:normal;
+              @include mediaM{
+                font-size: 24px;
+              }
+            }
+          }
+          .intro-exp{
+            margin-top: 20px;
+            @include mediaM{
+             margin-top: 14px;
+             text-align: center;
+            }
+            p{
+              font-family: $text;
+              font-size: 16px;
+              color:$black;
+              letter-spacing: 3px;
+              line-height: 40px;
+              
+            }
+          }
+
+        }
+       
+      }
+    }
+  }  
+///////お知らせ
+
+.news-section{
+  padding-bottom: 120px;
+}
+
+        .news-link{
+
+          .news-img-wrapper{
+            width: 100%;
+   
+         
+            img{
+              border-radius: 20px;
+              width: 100%;
+              height: 240px;
+            }
+          }
+          .tag-flex{
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            .news-date{
+              p{
+                font-size: 14px;
+                color:$black;
+                font-family: $default;
+
+              }
+            }
+            .category{
+              p{
+                font-size: 14px;
+                padding-left: 6px;
+                padding-right: 6px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                border-radius: 40px;
+                background-color: $black;
+                color:white;
+              }
+            }
+          }
+          .news-content{
+            margin-top: 20px;
+            p{
+              font-size: 16px;
+              font-family: $text;
+              color: $black;
+            }
+          }
+        }
+    
+    
+  .bg-wave{
+    background-image: url(../img/bg-wave-pink.png);
+    
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+  }
+  .news-section{
+    background-image: url(../img/bg-pink.png);
+
+
+    background-size: cover;
+  }
+
+
+
+  ///部屋紹介
+  .room-section{
+    margin-top: 120px;
+    // overflow: hidden;
+
+
+  }
+
+  .room-intro-flex{
+    display: flex;
+ 
+    gap: 40px ;
+    @include mediaM{
+      flex-direction: column;
+    }
+    .room-img{
+      width: 50%;
+      @include mediaM{
+        width: 100%;
+      }
+    }
+    .img-wrapper{
+      width: 100%;
+      img{
+        border-radius: 20px;
+        box-shadow: 8px 8px 0px 0 $purple;
+      
+        width: 100%;
+      }
+  
+    }
+    .room-text{
+      width: 50%;
+      @include mediaM{
+        width: 100%;
+      }
+      .room-ttl{
+        h2{
+          font-size: 30px;
+          font-family: $default;
+          line-height: 40px;
+          letter-spacing: 3px;
+          margin-bottom: 20px;
+          @include mediaM{
+            font-size: 18px;
+            line-height: 30px;
+          }
+
+        }
+      }
+      .room-exp{
+        p{
+          font-size: 18px;
+          line-height: 25px;
+          @include mediaM{
+            font-size: 16px;
+          }
+        }
+        .width{
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+  .rooms-wrapper{
+    .room-thumbnail-list{
+      display: flex;
+      gap: 20px;
+      @include mediaS{
+        flex-direction: column;
+        
+      }
+      .room-thumbnail{
+        width: calc((100% - 40px)/ 3);
+        @include mediaS{
+          width: 90%;
+        }
+   
+        .thumbnail-img{
+          width: 100%;
+          img{
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 8px 8px 0px 0 white;
+
+          }
+        }
+.thumbnail-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+        .black-tag{
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        background-color: $black;
+        color:white;
+        display: inline-block;
+        border-radius: 6px;
+        }
+      }
+    }
+  }
+  
+
+/////観光
+
+.sight-seeing-map-container{
+  margin-top: 160px;
+
+  @include mediaM{
+    margin-top: 100px;
+  }
+
+  .sight-seeing-map-wrapper{
+    width: 100%;
+    .map-wrapper{
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+/////料理
+
+
+.cuisine-section{
+  .cuisine-container{
+
+
+    margin-top: 160px;
+    @include mediaM{
+      margin-top: 100px;
+    }
+.cuisine-wrapper{
+  .cuisine-flex{
+    display: flex;
+    @include mediaM{
+      display: block;
+    }
+    .cuisine-dish{
+      width: 50%;
+      @include mediaM{
+        width: 100%;
+      }
+      .dish-wrapper{
+        width: 100%;
+
+        .dish-1{
+          width: 80%;
+          
+          img{
+            width: 100%;
+          }
+        }
+        .dish-2{
+          width: 60%;
+margin-left: 220px;
+margin-top: -110px;
+@include mediaM{
+  width: 40%;
+  margin-left: 180px;
+}
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+  }
+
+  .ingredient-wrapper{
+    width: 50%;
+    @include mediaM{
+      width: 100%;
+    }
+    .ingredient-top{
+      .ingredient-list{
+       position: relative;
+       height: 700px;
+       @include mediaM{
+        height: 500px;
+       }
+       @include mediaS{
+        height: 300px;
+       }
+        .ingredient1{
+          position: absolute;
+          width: 270px;
+         left: -10px;
+         top: 60px;
+         @include mediaM{
+          width: 150px;
+          left: 0;
+          top: 0;
+
+         }
+     img{
+      width: 100%;
+     }
+
+          
+
+        }
+        .ingredient2{
+          position: absolute;
+          width: 240px;
+         right:20px;
+         top: 0;
+         @include mediaM{
+          width: 140px;
+          right: 50px;
+          top: 40px;
+         }
+         img{
+          width: 100%;
+         }
+    
+              
+        }
+        .ingredient3{
+          position: absolute;
+          width: 240px;
+         left: 90px;
+         top: 140px;
+         @include mediaM{
+          width: 140px;
+          left: 50px;
+          top: 100px;
+         }
+
+         img{
+          width: 100%;
+         }
+    
+              
+        }
+        .ingredient4{
+          position: absolute;
+          width: 200px;
+         left: 0px;
+         top: 300px;
+@include mediaM{
+  width: 110px;
+  left: 20px;
+  top: 210px;
+}
+         img{
+          width: 100%;
+         }
+    
+              
+        }
+        .ingredient5{
+          position: absolute;
+          width: 200px;
+         right: 0px;
+         top: 220px;
+         @include mediaM{
+          width: 130px;
+          top: 170px;
+          right: 30px;
+         }
+
+         img{
+          width: 100%;
+         }
+    
+              
+        }
+        .ingredient6{
+          position: absolute;
+          width: 300px;
+         right: 0px;
+         top: 300px;
+         @include mediaM{
+          width: 200px;
+          top: 180px;
+          left: 100px;
+         }
+
+         img{
+          width: 100%;
+         }
+    
+              
+        }
+      }
+
+    }
+
+  }
+  
+
+}
+.ingredient-wrapper{
+  position: relative;
+}
+.ingredient-text{
+  position: absolute;
+  bottom: 100px;
+padding-left: 40px;
+padding-right: 80px;
+@include mediaM{
+  bottom: 0px;
+}
+  
+  
+    }
+.cuisine-button-wrapper{
+  padding-right: 80px;
+  @include mediaM{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.ingredient-text-sp{
+margin-left: 20px;
+margin-right: 20px;
+
+
+}
+.sub-ttl{
+  h4{
+    font-size: 24px;
+    font-family: $default;
+    color: $black;
+    margin-bottom: 20px;
+    @include mediaM{
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+  }
+
+}
+.exp{
+  p{
+    font-family: $text;
+    font-size: 16px;
+    color: $black;
+  }
+
+}
+
+
+///////宿泊プラン
+/// 
+.stay-plan-section{
+  background-image: url(../img/white-bg.png);
+  padding-top: 140px;
+}
+.slider2 {
+width: 90%;
+
+
+
+
+.slick-img  {
+
+
+  height: auto;
+  width: 100%;
+
+  .plan-img{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+}}
+.slick-slide {
+  margin: 0 20px; /* スライド間の余白のサイズを調整 */
+  @include mediaM{
+    margin: 0 10px;
+  }
+}
+
+.stay-paln-box{
+  .stay-plan-ttl{
+    margin-bottom: 20px;
+    @include mediaM{
+      margin-bottom: 14px;
+    }
+    h2{
+      font-size: 24px;
+    @include mediaM{
+      font-size: 20px;
+    }
+
+    }
+  }
+
+  .plan-exp{
+    font-size: 16px;
+    margin-bottom: 80px;
+    @include mediaM{
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.stay-plan{
+  .plan-img{
+    width: 100%;
+    margin-bottom: 23px;
+
+    img{
+      width: 100%;
+    }
+  }
+  
+}
+
+.bg-wave-white{
+  background-image: url(../img/white-wave.png);
+background-size: cover;
+background-repeat: no-repeat;
+height: 200px;
+margin-top: -70px;
+z-index: -2;
+background-position:center;
+
+}
+
+//////インスタグラム
+
+.instagram-section{
+  padding-top: 300px;
+  padding-bottom: 200px;
+  background-image: url(../img/yellow-bg.png);
+  margin-top: -200px;
+  position: relative;
+  z-index: -4;
+  .instagram-box{
+    background-image: url(../img/img-bg.png);
+  background-repeat: no-repeat;
+    background-position: center;
+  height: 700px;
+  }
+
+}
+
+.image-container {
+  display: none;
+}
+
+.wataya:hover .image-container {
+  display: block;
+}

@@ -1,0 +1,150 @@
+footer{
+    margin-top: -120px;
+
+    .wave-purple{
+  
+        background-image: url(../img/wave-purple.png);
+        z-index: 1;
+       height: 120px;
+       background-position-x:center;
+
+        
+    }
+    .footer-section{
+        padding-top: 60px;
+    padding-bottom: 90px;
+        background-image: url(../img/purple-bg.png);
+        margin-top: -20px;
+    }
+
+    .footer-wrapper{
+        display: flex;
+        justify-content: space-between;
+
+        gap: 20px;
+        @include mediaM{
+            display: block;
+        }
+        .footer-left{
+            width: 35%;
+            @include mediaM{
+                width: 100%;
+            }
+            .footer-left-wrapper{
+                .logo-wrapper{
+                    width: 274px;
+                    img{
+                        width: 100%;
+                    }
+
+                }
+                .sologram{
+                   font-size: 28px;
+                   color: #454545;
+                   margin-bottom: 20px;
+                }
+               
+            }
+            .address{
+                font-size: 16px;
+                color: #454545;
+                font-family: $text;
+            }
+            .ph{
+                font-size: 16px;
+                color:#454545;
+                font-family: $text;
+            }
+            .fax{
+                font-size: 16px;
+                color: #454545;
+                font-family: $text;
+            }
+        }
+        .footer-right{
+            width: 65%;
+            @include mediaM{
+                width: 100%;
+            }
+            .right-top{
+                display: flex;
+                margin-bottom: 60px;
+                @include mediaM{
+       justify-content: center;
+                    display: block;
+                }
+            }
+            .footer-button{
+                width: 30%;
+                display: flex;
+                align-items: end;
+                @include mediaM{
+                    justify-content: start;
+                    width: 100%;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                }
+            }
+            .puppy-img-wrapper{
+                width: 70%;
+                display: flex;
+                justify-content: end;
+                @include mediaM{
+
+                    width: 100%;
+                }
+                .img-wrapper{
+                    width: 180px;
+                    position: relative;
+                    margin-right: -60px;
+                    @include mediaM{
+                        margin-top: 30px;
+                        margin-right: 0;
+                        width: 60px;
+                    }
+                    img{
+                        width: 100%;
+                    }
+
+                }
+                .img-wrapper::after{
+                    content: "";
+                    background-image: url(../img/bubble.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 270px;
+                    height: 120px;
+                    position: absolute;
+                    left: -280px;
+                    top: -60px;
+                    @include mediaM{
+                        width: 170px;
+                        height: 100px;
+                        left: -100px;
+                    }
+                    
+
+                }
+                
+            }
+            .footer-menu-list{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                li{
+                    a{
+                        color: #454545;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+    
+
+
+

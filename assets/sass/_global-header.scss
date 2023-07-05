@@ -1,0 +1,321 @@
+@import url('https://fonts.cdnfonts.com/css/courier-new');
+
+header {
+  position: relative;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  padding-top: 56px;
+  @include mediaM{
+    padding-top: 0;
+
+  }
+}
+.page-header {
+  // position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.nav-bar {
+
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: start;
+  padding-left: 80px;
+  padding-right: 80px;
+// width: 100%;
+  // opacity: 0.8;
+  // padding-top: 12px;
+  // padding-bottom: 12px;
+
+  @include mediaM {
+    align-items: center;
+    // padding-top: 14px;
+    // padding-bottom: 14px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  // .nav-bar {
+  // width: 100%;
+  // display: flex;
+  //   background-color:$beige;
+  //   justify-content: space-between;
+
+  //   padding: 13px 0;
+
+  //   }
+
+  .logo-info {
+    display: flex;
+    align-items: start;
+    width: 200px;
+  }
+  .logo-sp{
+    width: 200px;
+  }
+  .logo {
+    // padding-left: 14px;
+    color: $white;
+    font-size: 1.875rem;
+    line-height: 0;
+
+    width: 100%;
+
+    @include mediaM {
+      display: block;
+    }
+  }
+  .global-menu {
+
+    width: calc(100% - 240px);
+    margin-left: 100px;
+    max-width: 720px;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+
+    @include mediaM {
+      background-color: white;
+      margin-left: 0;
+      width: 100%;
+      justify-content: end;
+    
+    }
+
+    @include mediaM {
+      padding-right: 20px;
+      transition: all 0.3s ease-out;
+      margin-top: inherit;
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      left: -450px;
+      // background-color: $white;
+
+      width: 350px;
+      .menu-list {
+        display: none !important;
+      }
+
+      //グローバルナビの表示非表示
+      &.show {
+        left: 0;
+
+        .menu-list {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          display: flex !important;
+
+          opacity: 0;
+          animation: menuFadein 0.5s forwards;
+          animation-delay: 0.5s;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-top: 15%;
+          @include mediaM{
+            gap: 20px;
+            justify-content: start;
+            align-items: start;
+          }
+
+          li {
+            margin-bottom: 10px;
+            // text-align: center;
+          }
+        }
+      }
+    }
+
+    .menu-list {
+      list-style: none;
+      display: flex;
+      justify-content: end;
+      align-items: start;
+      width: calc(100% - 220px);
+      @include mediaM {
+        width: calc(100% - 60px);
+        display: block;
+      }
+
+      li {
+        white-space: nowrap;
+        position: relative;
+        width: 70%;
+
+        a {
+          font-family: $default;
+          // color: black;
+
+          font-size: 16px;
+     
+
+          @include mediaM {
+            font-size: 16px;
+            // color: $blue;
+            border-bottom: 1px solid #000;
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      // &:before {
+      //   position: absolute;
+      //   content: "";
+      //   display: block;
+      //   top: 0;
+      //   bottom: 0;
+      //   right: 0;
+      //   width: 1px;
+      //   height: 50px;
+      //   margin: auto;
+      //   background-color: $pale-black;
+      // }
+    }
+  }
+}
+
+//グローバルメニュー表示のアニメーション
+@keyframes menuFadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.toggle-hamburger {
+  display: none;
+  @include mediaM {
+    $width: 26px;
+    $height: 24px;
+    $bar-height: 3px;
+    display: block;
+    width: $width;
+    height: $height;
+    z-index: 210;
+    & span {
+      display: block;
+      width: $width;
+      height: $bar-height;
+      background-color: $purple;
+      transition: all 0.4s;
+      &:nth-child(n + 2) {
+        $bar-space: $height - $bar-height * 3;
+        margin-top: $bar-space / 2;
+      }
+    }
+    &.close {
+      // barのY軸移動距離を算出
+      $moveY: ($height - $bar-height) / 2;
+      & span:nth-child(1) {
+        transform: translateY($moveY) rotate(45deg);
+      }
+      & span:nth-child(2) {
+        opacity: 0;
+      }
+      & span:nth-child(3) {
+        transform: translateY(-#{$moveY}) rotate(-45deg);
+      }
+    }
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+.headerNav__list {
+  position: relative;
+  text-align: center;
+
+}
+
+// .page-header.change-color {
+//   @include pc {
+//     background-color: $gray;
+//   }
+// }
+.entry-button {
+  width: 220px;
+  text-align: center;
+
+  @include mediaM {
+    display: none;
+  }
+  a {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    // background-color: white;
+    color: white;
+    width: 100%;
+    display: inline-block;
+
+   
+  }
+}
+.headerNav__list__link {
+  font-family: $default;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top:39px ;
+  padding-bottom:23px ;
+  position: relative;
+ background-image: url(../img/white-bg.png);
+ background-repeat: no-repeat;
+ background-size:cover;
+ border-radius: 4px;
+ box-shadow: 3px 3px 0px 0 $purple;
+ @include mediaM{
+  text-align: left;
+  padding-left: 34px;
+  display: block;
+  width: 100%;
+  padding-top:10px ;
+  padding-bottom:10px ;
+  // padding-left: 23px;
+  // padding-right: 16px;
+  writing-mode: horizontal-tb;
+
+ }
+
+}
+.headerNav__list__link::before{
+  content:"";
+  background-image: url(../img/hana-icon.png);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  @include mediaM{
+    top: 10px;
+    left: 10px;
+  }
+}
+
+
+.toggle-hamburger{
+  position: relative;
+}
+.toggle-hamburger::after{
+ content:"";
+ background: white;
+ border-radius: 70% 50% 70% 60% / 40% 80% 60% 70%;
+ width: 50px;
+ height: 50px;
+ position: absolute;
+ left: -12px;
+ top: -10px;
+ z-index: -1;
+
+}

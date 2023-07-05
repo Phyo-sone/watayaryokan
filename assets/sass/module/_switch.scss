@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #000;
+    height: 60px;
+ 
+  }
+  
+  .nav-logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  
+  .nav-greeting p {
+    font-size: 24px;
+  }
+  
+  .toggle-button {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin: 10px;
+  }
+  
+  .toggle-button input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle-button span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: background-color 0.5s ease;
+    border-radius: 25px;
+  }
+  
+  .toggle-button span:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 2px;
+    bottom: 2px;
+    // background-color: white;
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+  }
+  
+  input[type="checkbox"]:checked + span {
+    background-color: #2196F3;
+  }
+  
+  input[type="checkbox"]:checked + span:before {
+    transform: translateX(25px);
+  }
+  
+  /* ダークモードのスタイル */
+  body.dark-mode {
+    background-color:$dark-body;
+    color: #fff !important;
+  }
+  
+  nav.dark-mode {
+    background-color:$dark-body;
+    color: #fff;
+  }
+  
+
+  .dark-mode h4 {
+    color:$dark-text !important;
+
+  }
+  .nav-toggle.dark-mode span {
+    background-color: #fff;
+  }
+  
+  .nav-toggle.dark-mode input[type="checkbox"]:checked + span {
+    background-color: #ccc;
+  }
+  
+  .nav-toggle.dark-mode input[type="checkbox"]:checked + span:before {
+    transform: translateX(0);
+  }
+
+   /* トグルボタンのスタイル */
+   .toggle-button {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin: 10px;
+  }
+
+  .toggle-button input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .toggle-button span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: background-color 0.5s ease;
+    border-radius: 25px;
+  }
+
+  .toggle-button span:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+  }
+
+  input[type="checkbox"]:checked + span {
+    background-color: #2196F3;
+  }
+
+  input[type="checkbox"]:checked + span:before {
+    transform: translateX(25px);
+  }
+
+
+
+  .nav-link {
+    color:$black;
+    letter-spacing: 3.4px;
+  }
+  
+  .dark-mode .nav-link {
+    color: white;
+  }
+  
+  // .nav-bar{
+  //   background-color: #fff;
+  // }
+  .dark-mode .nav-bar{
+    background-color: $dark-body;
+  }
+
+  .sub-title{
+    color:$black;
+  }
+  .dark-mode .sub-title{
+    color: $dark-text;
+  }

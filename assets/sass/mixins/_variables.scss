@@ -1,0 +1,75 @@
+/*共通部分*/
+html {
+  font-size: 100%;
+  letter-spacing: 0.22em;
+  visibility: hidden;
+}
+
+//Webフォントの読み込みを終えたら表示
+html.wf-active {
+  visibility: visible;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Gotu', sans-serif;
+  line-height: 1.3;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+
+}
+
+// body.fixed {
+//   width: 100%;
+//   position: fixed;
+//   overflow: hidden;
+// }
+
+//コンテンツに余白をつける。
+// .wrapper {
+//   padding: 0 4%;
+// }
+
+.max-extend {
+  max-width: 1920px;
+
+  margin: auto;
+}
+
+
+
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-size: 2rem;
+//   line-height: 1;
+//   @include mediaS {
+//     font-size: 1.5rem;
+//   }
+//   @include mediaXS {
+//     font-size: 1.25rem;
+//   }
+// }
+h3 {
+  font-family: serif;
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+}
+
+// img {
+//   max-width: 100%;
+// }
+.common-content {
+  margin: auto;
+  max-width: 1206px;
+}
+// p {
+//   line-height: 21px;
+// }
