@@ -149,7 +149,7 @@
         <div class="page-header">
             <div id="nav-bar" class=" nav-bar">
                 <div class="logo-info">
-                    <a href="#"> <img class="logo only-pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" />
+                    <a href="<?php echo esc_url(home_url("//")); ?>"> <img class="logo only-pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" />
                     <img class="logo-sp only-sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-sp.png" /> </a>
                 </div>
 
@@ -157,25 +157,25 @@
                 <nav class="global-menu" id="global-menu">
                     <ul class="menu-list">
                         <li class="headerNav__list">
-                            <a class="headerNav__list__link nav-link" href="#work">ようこそ綿屋旅館へ
+                            <a class="headerNav__list__link nav-link" href="<?php echo esc_url(home_url("/about/")); ?>">ようこそ綿屋旅館へ
                             </a>
                         </li>
                         <li class="headerNav__list">
-                            <a class="headerNav__list__link nav-link" href="#about">宿泊プラン</a>
+                            <a class="headerNav__list__link nav-link" href="<?php echo esc_url(home_url("/plan/")); ?>">宿泊プラン</a>
                         </li>
                         <li class="headerNav__list">
                             <a class="headerNav__list__link nav-link" href="#thought">お知らせ</a>
                         </li>
                         <li class="headerNav__list">
-                            <a class="headerNav__list__link nav-link" href="assets/img/khun.pdf">おもてなし</a>
+                            <a class="headerNav__list__link nav-link" href="">おもてなし</a>
 
                         </li>
                         <li class="headerNav__list">
-                            <a class="headerNav__list__link nav-link" href="assets/img/khun.pdf">ご予約</a>
+                            <a class="headerNav__list__link nav-link" href="https://www.yado-sagashi.net/yoyaku/plan/index2.jsp?beg&all&yid=23120638184302">ご予約</a>
 
                         </li>
                         <li class="headerNav__list">
-                            <a class="headerNav__list__link nav-link" href="assets/img/khun.pdf">お問い合わせ</a>
+                            <a class="headerNav__list__link nav-link" href="<?php echo esc_url(home_url("/contact/")); ?>">お問い合わせ</a>
 
                         </li>
 

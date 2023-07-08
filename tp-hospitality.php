@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: ようこそ綿屋旅館へ
+Template Name: おもてなし
 */
 ?>
 <?php get_header(); ?>

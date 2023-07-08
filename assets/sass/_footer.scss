@@ -1,20 +1,31 @@
 footer{
     margin-top: -120px;
+    @include mediaM{
+        margin-top: -20px;
+    }
 
     .wave-purple{
   
         background-image: url(../img/wave-purple.png);
+        position: relative;
         z-index: 1;
        height: 120px;
        background-position-x:center;
+       @include mediaM{
+        height: 30px;
+       }
+
 
         
     }
     .footer-section{
-        padding-top: 60px;
+        padding-top: 90px;
     padding-bottom: 90px;
         background-image: url(../img/purple-bg.png);
         margin-top: -20px;
+        @include mediaM{
+            padding-bottom: 60px;
+        }
     }
 
     .footer-wrapper{

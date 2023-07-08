@@ -1,0 +1,118 @@
+.wataya-plan-section{
+
+    padding-bottom: 200px;
+    background-image: url(../img/leaf-4.png);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: 940px 780px;
+
+  
+
+    .hall-text{
+        text-align: center;
+        margin-top: 40px;
+        @include mediaM{
+            margin-top: 30px;
+        }
+        p{
+            font-family: $text;
+            font-size: 16px;
+        }
+    }
+    .hall-img-list-wrapper{
+        margin-top: 90px;
+        @include mediaM{
+            margin-top: 50px;
+        }
+        .hall-img-list{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+            gap: 25px;
+        
+
+            li{
+                width: calc((100% - 50px)/ 3);
+                margin-bottom: 40px;
+
+                @include mediaM{
+                    width: calc((100% - 36px)/ 2);
+
+                }
+                @include mediaM{
+                    margin-bottom: 30px;
+                }
+                position: relative;
+                img{
+                    width: 100%;
+                    border-radius: 20px;
+                    @include mediaS{
+                        border-radius: 14px;
+                    }
+                 
+                }
+
+                .plan-text{
+                    margin-top: 14px;
+                    padding-bottom: 14px;
+                    p{
+                        font-family:$text;
+                        font-size: 16px;
+                      color:$black;
+                    }
+                }
+                .plan-tag-list{
+                    display: flex;
+                    gap: 10px;
+                    .plan-tag{
+                        padding-left: 14px;
+                        padding-right: 14px;
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                        background-color: $purple;
+                        color:white;
+                        border-radius: 10px;
+                        @include mediaM{
+                            font-size: 14px;
+                        }
+            
+
+                    }
+                }
+            }
+
+            .tag-verticle{
+                p{
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    background-color: $black-dark;
+                   color:white;
+                   display: inline-block;
+                  border-radius: 10px;
+                  position: absolute;
+                  right: 10px;
+                  top: -20px;
+                  -ms-writing-mode: tb-rl;
+                  writing-mode: vertical-rl;
+                letter-spacing: 6px;
+                @include mediaM{
+                    font-size: 14px;
+                }
+                @include mediaM{
+                    padding-left: 6px;
+                    padding-right: 5px;
+
+                }
+
+                  
+                }
+            }
+
+        }
+    }
+
+
+}

@@ -363,7 +363,6 @@ body {
 
 /* 2カラムレイアウト */
 .ly_plan {
-  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -496,6 +495,14 @@ body {
 .plan-ttl {
   position: relative;
   padding-top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 @media screen and (max-width: 992px) {
   .plan-ttl {
@@ -706,19 +713,35 @@ body {
 }
 @media screen and (max-width: 992px) {
   .insta-ttl::before {
-    width: 120px;
-    height: 100px;
-    left: 35px;
-    top: 20px;
+    background-size: cover;
+    width: 320px;
+    height: 120px;
+    left: -10px;
+    top: -40px;
   }
 }
 @media screen and (max-width: 768px) {
   .insta-ttl::before {
-    width: 120px;
-    height: 100px;
+    background-size: cover;
+    width: 320px;
+    height: 120px;
     left: -10px;
-    top: 20px;
+    top: -40px;
   }
+}
+
+.hall-text {
+  text-align: center;
+  margin-top: 40px;
+}
+@media screen and (max-width: 992px) {
+  .hall-text {
+    margin-top: 30px;
+  }
+}
+.hall-text p {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 16px;
 }
 
 /*--プロジェクトごとのCSSは以下にimport--*/
@@ -1073,17 +1096,33 @@ header {
 footer {
   margin-top: -120px;
 }
+@media screen and (max-width: 992px) {
+  footer {
+    margin-top: -20px;
+  }
+}
 footer .wave-purple {
   background-image: url(../img/wave-purple.png);
+  position: relative;
   z-index: 1;
   height: 120px;
   background-position-x: center;
 }
+@media screen and (max-width: 992px) {
+  footer .wave-purple {
+    height: 30px;
+  }
+}
 footer .footer-section {
-  padding-top: 60px;
+  padding-top: 90px;
   padding-bottom: 90px;
   background-image: url(../img/purple-bg.png);
   margin-top: -20px;
+}
+@media screen and (max-width: 992px) {
+  footer .footer-section {
+    padding-bottom: 60px;
+  }
 }
 footer .footer-wrapper {
   display: -webkit-box;
@@ -1445,6 +1484,9 @@ input[type=checkbox]:checked + span:before {
 body {
   background-image: url(../img/bg.png);
   background-attachment: fixed;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  z-index: 9999;
   margin: 0;
   padding: 0;
   max-width: 1980px;
@@ -1630,11 +1672,17 @@ body {
 
 .introduction-section {
   padding-right: 80px;
+  background-image: url(../img/yuri-illustrate.png), url(../img/leaf-small.png), url(../img/leaf-2.png);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 300px, 200px, 500px;
+  background-position: 1050px 780px, 820px 830px, 220px 450px;
 }
 @media screen and (max-width: 992px) {
   .introduction-section {
     padding-right: 20px;
     padding-left: 20px;
+    background-size: 200px, 150px, 300px;
+    background-position: 300px 900px, -20px 940px, 220px 450px;
   }
 }
 .introduction-section .intro-wrapper .intro-flex {
@@ -1752,6 +1800,49 @@ body {
 
 .news-section {
   padding-bottom: 120px;
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  .news-section {
+    overflow: hidden;
+  }
+}
+
+.news-section::after {
+  content: "";
+  background-image: url(../img/leaf-big.png);
+  background-size: contain;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: 999;
+  bottom: -180px;
+  left: -220px;
+}
+@media screen and (max-width: 992px) {
+  .news-section::after {
+    width: 300px;
+    left: -100px;
+    bottom: -240px;
+  }
+}
+
+.news-section::before {
+  content: "";
+  background-image: url(../img/stem.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: 999;
+  bottom: -400px;
+  left: 200px;
+}
+@media screen and (max-width: 992px) {
+  .news-section::before {
+    width: 200px;
+  }
 }
 
 .news-link .news-img-wrapper {
@@ -1807,7 +1898,17 @@ body {
 }
 
 .room-section {
-  margin-top: 120px;
+  padding-top: 200px;
+  background-image: url(../img/leaf-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: 566px -120px;
+}
+@media screen and (max-width: 992px) {
+  .room-section {
+    background-position: 200px -120px;
+  }
 }
 
 .room-intro-flex {
@@ -1938,6 +2039,7 @@ body {
 }
 
 .sight-seeing-map-container {
+  position: relative;
   margin-top: 160px;
 }
 @media screen and (max-width: 992px) {
@@ -1955,6 +2057,25 @@ body {
   width: 100%;
 }
 
+.sight-seeing-map-container::after {
+  content: "";
+  background-image: url(../img/sunflower.png);
+  width: 200px;
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -500px;
+  left: -130px;
+}
+
+.cuisine-section {
+  background-image: url(../img/sunflower-leaf.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: 1060px 100px;
+}
 .cuisine-section .cuisine-container {
   margin-top: 160px;
 }
@@ -2260,6 +2381,12 @@ body {
   background-position: center;
   height: 700px;
 }
+@media screen and (max-width: 992px) {
+  .instagram-section .instagram-box {
+    background-position: center;
+    background-position-x: center;
+  }
+}
 
 .image-container {
   display: none;
@@ -2275,18 +2402,39 @@ header {
 
 .pages-top {
   position: absolute;
+  width: 100%;
   top: 0;
 }
 .pages-top .pages-wrapper {
   width: 100%;
-  height: 260px;
+  height: 350px;
+}
+@media screen and (max-width: 992px) {
+  .pages-top .pages-wrapper {
+    height: 280px;
+  }
 }
 .pages-top .pages-wrapper img {
+  height: 350px;
   width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .pages-top .pages-wrapper img {
+    height: 280px;
+  }
 }
 
 .pages-ttl {
-  margin-top: 70px;
+  margin-top: 100px;
+}
+@media screen and (max-width: 992px) {
+  .pages-ttl {
+    margin-top: 210px;
+  }
+}
+
+.tp-concept-section {
+  padding-top: 120px;
 }
 
 .concept-flex {
@@ -2311,7 +2459,7 @@ header {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 70px;
+    gap: 50px;
   }
 }
 .concept-flex .concept-ttl {
@@ -2494,6 +2642,11 @@ header {
 
 .concept-container {
   margin-bottom: 120px;
+}
+@media screen and (max-width: 992px) {
+  .concept-container {
+    margin-bottom: 60px;
+  }
 }
 
 .concept-flex-reverse {
@@ -2680,6 +2833,7 @@ header {
 }
 @media screen and (max-width: 992px) {
   .concept2-text {
+    margin-top: 30px;
     width: 100%;
   }
 }
@@ -2695,6 +2849,9 @@ header {
   }
 }
 
+.furukawasensei-section {
+  padding-bottom: 120px;
+}
 .furukawasensei-section .fukidashi-ttl {
   background-image: url(../img/fukudashi.png);
   width: 340px;
@@ -2712,6 +2869,14 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width: 992px) {
+  .furukawasensei-section .fukidashi-ttl {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
 .furukawasensei-section .fukidashi-ttl h4 {
   font-size: 24px;
 }
@@ -2728,14 +2893,38 @@ header {
   display: flex;
   gap: 70px;
 }
+@media screen and (max-width: 992px) {
+  .furukawasensei-section .furukawasensei-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 30px;
+  }
+}
 .furukawasensei-section .furukawasensei-flex .book-img {
   width: 30%;
+}
+@media screen and (max-width: 992px) {
+  .furukawasensei-section .furukawasensei-flex .book-img {
+    width: 60%;
+  }
 }
 .furukawasensei-section .furukawasensei-flex .book-img img {
   width: 100%;
 }
 .furukawasensei-section .furukawasensei-flex .book-exp {
   width: 70%;
+}
+@media screen and (max-width: 992px) {
+  .furukawasensei-section .furukawasensei-flex .book-exp {
+    width: 100%;
+  }
 }
 .furukawasensei-section .furukawasensei-flex .book-exp .book-text {
   line-height: 24px;
@@ -2755,5 +2944,525 @@ header {
 .furukawasensei-section .books-list li a {
   color: #707070;
   font-family: "Zen Maru Gothic", sans-serif;
+}
+
+.wave-up-bg {
+  background-image: url(../img/up-wave-white.png);
+  width: 100%;
+  height: 140px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 992px) {
+  .wave-up-bg {
+    background-position: center;
+    height: 100px;
+  }
+}
+
+.wataya-hall-section {
+  background-image: url(../img/white-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wataya-hall-section .hall-text {
+  text-align: center;
+  margin-top: 40px;
+}
+@media screen and (max-width: 992px) {
+  .wataya-hall-section .hall-text {
+    margin-top: 30px;
+  }
+}
+.wataya-hall-section .hall-text p {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 16px;
+}
+.wataya-hall-section .hall-img-list-wrapper {
+  margin-top: 90px;
+}
+@media screen and (max-width: 992px) {
+  .wataya-hall-section .hall-img-list-wrapper {
+    margin-top: 50px;
+  }
+}
+.wataya-hall-section .hall-img-list-wrapper .hall-img-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  gap: 18px;
+}
+.wataya-hall-section .hall-img-list-wrapper .hall-img-list li {
+  width: calc((100% - 54px) / 4);
+  margin-bottom: 40px;
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  .wataya-hall-section .hall-img-list-wrapper .hall-img-list li {
+    width: calc((100% - 36px) / 2);
+  }
+}
+@media screen and (max-width: 992px) {
+  .wataya-hall-section .hall-img-list-wrapper .hall-img-list li {
+    margin-bottom: 30px;
+  }
+}
+.wataya-hall-section .hall-img-list-wrapper .hall-img-list li img {
+  width: 100%;
+  border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+  .wataya-hall-section .hall-img-list-wrapper .hall-img-list li img {
+    border-radius: 14px;
+  }
+}
+.wataya-hall-section .hall-img-list-wrapper .hall-img-list .tag-verticle p {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #222222;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
+  letter-spacing: 6px;
+}
+@media screen and (max-width: 992px) {
+  .wataya-hall-section .hall-img-list-wrapper .hall-img-list .tag-verticle p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .wataya-hall-section .hall-img-list-wrapper .hall-img-list .tag-verticle p {
+    padding-left: 6px;
+    padding-right: 5px;
+  }
+}
+
+.wave-bottom-bg {
+  background-image: url(../img/down-wave-white.png);
+  width: 100%;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+@media screen and (max-width: 992px) {
+  .wave-bottom-bg {
+    background-position: center;
+    height: 100px;
+  }
+}
+
+.access-section .access-container .area .area-ttl {
+  position: relative;
+  margin-top: 100px;
+  padding-left: 80px;
+  font-size: 32px;
+}
+@media screen and (max-width: 992px) {
+  .access-section .access-container .area .area-ttl {
+    margin-top: 60px;
+  }
+}
+.access-section .access-container .area .area-ttl .font-up {
+  font-size: 32px;
+  color: #7358A7;
+  margin-bottom: 10px;
+  position: absolute;
+  top: -9px;
+  left: 0;
+}
+.access-section .access-container .area .area-ttl .font-down {
+  position: absolute;
+  top: -6;
+  left: 40px;
+  font-size: 32px;
+  color: #7358A7;
+}
+@media screen and (max-width: 992px) {
+  .access-section .access-container .area .area-ttl .font-down {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .access-section .access-container .area .area-ttl {
+    font-size: 20px;
+  }
+}
+.access-section .area-access-img {
+  width: 100%;
+}
+.access-section .area-access-img img {
+  width: 100%;
+}
+.access-section .bus-container {
+  margin-top: 30px;
+}
+.access-section .bus-container .bus-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+.access-section .bus-container .bus-flex .bus-img {
+  width: 240px;
+}
+.access-section .bus-container .bus-flex .bus-img img {
+  width: 100%;
+}
+.access-section .bus-container .bus-text h5 {
+  font-size: 34px;
+  color: #7358A7;
+}
+@media screen and (max-width: 992px) {
+  .access-section .bus-container .bus-text h5 {
+    font-size: 20px;
+  }
+}
+
+.map-section .map-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.map-section .map-wrapper .map-img {
+  padding-bottom: 130px;
+  width: 80%;
+}
+@media screen and (max-width: 992px) {
+  .map-section .map-wrapper .map-img {
+    width: 100%;
+  }
+}
+.map-section .map-wrapper .map-img iframe {
+  border-radius: 20px;
+}
+
+.wataya-plan-section {
+  padding-bottom: 200px;
+  background-image: url(../img/leaf-4.png);
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position: 940px 780px;
+}
+.wataya-plan-section .hall-text {
+  text-align: center;
+  margin-top: 40px;
+}
+@media screen and (max-width: 992px) {
+  .wataya-plan-section .hall-text {
+    margin-top: 30px;
+  }
+}
+.wataya-plan-section .hall-text p {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 16px;
+}
+.wataya-plan-section .hall-img-list-wrapper {
+  margin-top: 90px;
+}
+@media screen and (max-width: 992px) {
+  .wataya-plan-section .hall-img-list-wrapper {
+    margin-top: 50px;
+  }
+}
+.wataya-plan-section .hall-img-list-wrapper .hall-img-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  gap: 25px;
+}
+.wataya-plan-section .hall-img-list-wrapper .hall-img-list li {
+  width: calc((100% - 50px) / 3);
+  margin-bottom: 40px;
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  .wataya-plan-section .hall-img-list-wrapper .hall-img-list li {
+    width: calc((100% - 36px) / 2);
+  }
+}
+@media screen and (max-width: 992px) {
+  .wataya-plan-section .hall-img-list-wrapper .hall-img-list li {
+    margin-bottom: 30px;
+  }
+}
+.wataya-plan-section .hall-img-list-wrapper .hall-img-list li img {
+  width: 100%;
+  border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+  .wataya-plan-section .hall-img-list-wrapper .hall-img-list li img {
+    border-radius: 14px;
+  }
+}
+.wataya-plan-section .hall-img-list-wrapper .hall-img-list li .plan-text {
+  margin-top: 14px;
+  padding-bottom: 14px;
+}
+.wataya-plan-section .hall-img-list-wrapper .hall-img-list li .plan-text p {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 16px;
+  color: #707070;
+}
+.wataya-plan-section .hall-img-list-wrapper .hall-img-list li .plan-tag-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.wataya-plan-section .hall-img-list-wrapper .hall-img-list li .plan-tag-list .plan-tag {
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #7358A7;
+  color: white;
+  border-radius: 10px;
+}
+@media screen and (max-width: 992px) {
+  .wataya-plan-section .hall-img-list-wrapper .hall-img-list li .plan-tag-list .plan-tag {
+    font-size: 14px;
+  }
+}
+.wataya-plan-section .hall-img-list-wrapper .hall-img-list .tag-verticle p {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #222222;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
+  letter-spacing: 6px;
+}
+@media screen and (max-width: 992px) {
+  .wataya-plan-section .hall-img-list-wrapper .hall-img-list .tag-verticle p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .wataya-plan-section .hall-img-list-wrapper .hall-img-list .tag-verticle p {
+    padding-left: 6px;
+    padding-right: 5px;
+  }
+}
+
+.contact-section {
+  padding-bottom: 200px;
+  background-image: url(../img/feather.png), url(../img/line.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 300px, 500px;
+  background-position: 1000px -10px, 400px 300px;
+}
+.contact-section .contact-box {
+  margin-top: 40px;
+  font-family: "Zen Maru Gothic", sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact-section .contact-box table tr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+.contact-section .contact-box table tr th {
+  width: 40%;
+}
+.contact-section .contact-box table tr td {
+  width: 60%;
+}
+
+.wp-block-contact-form-7-contact-form-selector {
+  width: 80% !important;
+}
+@media screen and (max-width: 992px) {
+  .wp-block-contact-form-7-contact-form-selector {
+    width: 100% !important;
+  }
+}
+
+.wpcf7 {
+  width: 100% !important;
+}
+
+.wpcf7-form {
+  width: 100% !important;
+}
+
+.contact__form {
+  width: 90% !important;
+  margin: 0 auto;
+}
+.contact__form tr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 20px;
+}
+.contact__form th {
+  font-weight: 500;
+  width: 30%;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.contact__form td {
+  width: 70%;
+}
+.contact__form input {
+  margin-bottom: 14px !important;
+}
+
+.wpcf7-form-control-wrap {
+  width: 100% !important;
+}
+.wpcf7-form-control-wrap input {
+  width: 100%;
+  border: none !important;
+  padding: 10px;
+  border-radius: 8px;
+}
+.wpcf7-form-control-wrap textarea {
+  width: 100% !important;
+  border: none !important;
+  border-radius: 8px;
+}
+
+.contact__submit {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 60px;
+}
+.contact__submit p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.wpcf7-submit {
+  background-image: url(../img/button-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none !important;
+  background-color: unset !important;
+  padding-top: 30px;
+  font-family: "Yuji Syuku", serif;
+  color: white;
+  padding-bottom: 30px;
+  font-size: 18px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.wpcf7-checkbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin-bottom: 20px;
+}
+.wpcf7-checkbox label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wpcf7-checkbox label input {
+  width: 10px !important;
+  text-align: left;
+}
+
+.wpcf7-previous {
+  background-image: url(../img/prev-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none !important;
+  background-color: unset !important;
+  padding-top: 30px;
+  font-family: "Yuji Syuku", serif;
+  color: white;
+  padding-bottom: 30px;
+  font-size: 18px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 /*# sourceMappingURL=style.css.map */

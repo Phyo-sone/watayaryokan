@@ -3,23 +3,38 @@ header{
 }
 .pages-top{
     position: absolute;
+    width: 100%;
  top:0;
  .pages-wrapper{
     width: 100%;
-    height: 260px;
-    img{
-        width: 100%;
+    height: 350px;
+    @include mediaM{
+        height: 280px;
     }
-    
+
+    // height: 260px;
+    img{
+        height: 350px;
+        width: 100%;
+        @include mediaM{
+            height: 280px;
+        }
+
+    }
 
  }
 
 
 }
 .pages-ttl{
-    margin-top: 70px;
+    margin-top: 100px;
+    @include mediaM{
+        margin-top: 210px;
+    }
 }
-
+.tp-concept-section{
+    padding-top: 120px;
+}
 
   .concept-flex{
     display: flex;
@@ -28,7 +43,7 @@ header{
     @include mediaM{
       flex-direction: column-reverse;
       align-items: center;
-      gap: 70px;
+      gap: 50px;
     }
 
     .concept-ttl{
@@ -179,6 +194,9 @@ margin-right: 140px;
 
 .concept-container{
    margin-bottom: 120px;
+   @include mediaM{
+    margin-bottom: 60px;
+   }
 
    
 }
@@ -317,6 +335,7 @@ margin-right: 140px;
 
     width: 100%;
     @include mediaM{
+        margin-top: 30px;
         width: 100%;
     }
 }
@@ -335,7 +354,7 @@ margin-right: 140px;
 /////古川先生
 
 .furukawasensei-section{
-
+padding-bottom: 120px;
     .fukidashi-ttl{
         background-image: url(../img/fukudashi.png);
         width: 340px;
@@ -344,6 +363,13 @@ margin-right: 140px;
         display: flex;
         align-items:center;
         justify-content: center;
+        @include mediaM{
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+        }
 
         h4{
             font-size: 24px;
@@ -359,14 +385,26 @@ margin-right: 140px;
         margin-top: 40px;
         display: flex;
         gap: 70px;
+        @include mediaM{
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+        }
         .book-img{
             width: 30%;
+            @include mediaM{
+                width: 60%;
+            }
             img{
                 width: 100%;
             }
         }
         .book-exp{
             width: 70%;
+            @include mediaM{
+                width: 100%;
+            }
 
             .book-text{
                 line-height: 24px;
@@ -390,4 +428,217 @@ margin-right: 140px;
         }
     }
     }
+}
+
+
+//////館内
+.wave-up-bg{
+    background-image: url(../img/up-wave-white.png);
+    width: 100%;
+    height: 140px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mediaM{
+        background-position: center;
+        height: 100px;
+    }
+}
+.wataya-hall-section{
+    background-image: url(../img/white-bg.png);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+
+    .hall-text{
+        text-align: center;
+        margin-top: 40px;
+        @include mediaM{
+            margin-top: 30px;
+        }
+        p{
+            font-family: $text;
+            font-size: 16px;
+        }
+    }
+    .hall-img-list-wrapper{
+        margin-top: 90px;
+        @include mediaM{
+            margin-top: 50px;
+        }
+        .hall-img-list{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        
+
+            li{
+                width: calc((100% - 54px)/ 4);
+                margin-bottom: 40px;
+
+                @include mediaM{
+                    width: calc((100% - 36px)/ 2);
+
+                }
+                @include mediaM{
+                    margin-bottom: 30px;
+                }
+                position: relative;
+                img{
+                    width: 100%;
+                    border-radius: 20px;
+                    @include mediaS{
+                        border-radius: 14px;
+                    }
+                 
+                }
+            }
+
+            .tag-verticle{
+                p{
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    background-color: $black-dark;
+                   color:white;
+                   display: inline-block;
+                  border-radius: 10px;
+                  position: absolute;
+                  right: 10px;
+                  top: -20px;
+                  -ms-writing-mode: tb-rl;
+                  writing-mode: vertical-rl;
+                letter-spacing: 6px;
+                @include mediaM{
+                    font-size: 14px;
+                }
+                @include mediaM{
+                    padding-left: 6px;
+                    padding-right: 5px;
+
+                }
+
+                  
+                }
+            }
+
+        }
+    }
+
+
+}
+
+.wave-bottom-bg{
+    background-image: url(../img/down-wave-white.png);
+    width: 100%;
+    height: 180px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: 10;
+    @include mediaM{
+        background-position: center;
+        height: 100px;
+    }
+}
+
+.access-section{
+    .access-container{
+        .area{
+            .area-ttl{
+                position: relative;
+                margin-top: 100px;
+                @include mediaM{
+                    margin-top: 60px;
+                }
+                
+                .font-up{
+                 
+
+                    font-size: 32px;
+                    color: $purple;
+                 margin-bottom: 10px;
+             position: absolute;
+             top: -9px;
+             left: 0;
+
+                }
+                .font-down{
+                    position: absolute;
+                    top:-6;
+                    left: 40px;
+                    font-size: 32px;
+                    color: $purple;
+                    @include mediaM{
+                        font-size: 20px;
+                    }
+                }
+                padding-left: 80px;
+                font-size: 32px;
+                @include mediaM{
+                    font-size: 20px;
+                }
+
+
+            }
+        }
+    }
+    .area-access-img{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+
+    .bus-container{
+        margin-top: 30px;
+        .bus-flex{
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            gap: 30px;
+
+            .bus-img{
+                width: 240px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .bus-text{
+            h5{
+                font-size: 34px;
+                color:$purple;
+                @include mediaM{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+/////地図
+
+.map-section{
+
+    .map-wrapper{
+        display: flex;
+        justify-content: center;
+        .map-img{
+            padding-bottom: 130px;
+            width: 80%;
+            @include mediaM{
+                width: 100%;
+            }
+            iframe{
+                border-radius: 20px;
+            }
+        }
+    
+    }
+    
 }
