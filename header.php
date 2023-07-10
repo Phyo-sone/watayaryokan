@@ -8,13 +8,13 @@
 
     <!-- ////Googleフォント -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link href="https://fonts.googleapis.com/css?family=Avenir+Next" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css?family=Avenir+Next" rel="stylesheet">
     <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
     <!-- JS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -23,9 +23,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script> -->
 
     <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css"/> -->
-    <!-- <script src="<?php //echo get_template_directory_uri(); ?>/assets/js/script.js"></script>
-    <script src="<?php //echo get_template_directory_uri(); ?>/assets/js/toggle.js"></script>
-    <script src="<?php //echo get_template_directory_uri(); ?>/assets/js/slick.js"></script> -->
+    <!-- <script src="<?php //echo get_template_directory_uri(); 
+                        ?>/assets/js/script.js"></script>
+    <script src="<?php //echo get_template_directory_uri(); 
+                    ?>/assets/js/toggle.js"></script>
+    <script src="<?php //echo get_template_directory_uri(); 
+                    ?>/assets/js/slick.js"></script> -->
     <!-- <script src="assets/js/jquery.inview.min.js"></script>
     <script src="assets/js/script.js"></script> -->
 
@@ -138,7 +141,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php echo body_class(); ?>>
     <!-- <div class="SiteWrapper"> -->
 
 
@@ -150,7 +153,7 @@
             <div id="nav-bar" class=" nav-bar">
                 <div class="logo-info">
                     <a href="<?php echo esc_url(home_url("//")); ?>"> <img class="logo only-pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" />
-                    <img class="logo-sp only-sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-sp.png" /> </a>
+                        <img class="logo-sp only-sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-sp.png" /> </a>
                 </div>
 
                 <!--ヘッダー・グローバルメニュー-->
@@ -164,7 +167,7 @@
                             <a class="headerNav__list__link nav-link" href="<?php echo esc_url(home_url("/plan/")); ?>">宿泊プラン</a>
                         </li>
                         <li class="headerNav__list">
-                            <a class="headerNav__list__link nav-link" href="#thought">お知らせ</a>
+                            <a class="headerNav__list__link nav-link" href="<?php echo esc_url(home_url("/news/")); ?>">お知らせ</a>
                         </li>
                         <li class="headerNav__list">
                             <a class="headerNav__list__link nav-link" href="">おもてなし</a>
@@ -195,7 +198,3 @@
         </div>
 
     </header>
-
-
-  
-   

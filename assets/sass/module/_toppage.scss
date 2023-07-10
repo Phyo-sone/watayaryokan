@@ -279,7 +279,7 @@ height: 120px;
   }  
 ///////お知らせ
 
-.news-section{
+.home .news-section{
   padding-bottom: 120px;
   position: relative;
   @include mediaM{
@@ -289,7 +289,7 @@ height: 120px;
   
 }
 
-.news-section::after{
+.home .news-section::after{
   content:"";
   background-image: url(../img/leaf-big.png);
   background-size: contain;
@@ -307,7 +307,7 @@ height: 120px;
   }
 }
 
-.news-section::before{
+.home .news-section::before{
    content:"";
   background-image: url(../img/stem.png);
   background-size: contain;
@@ -325,7 +325,7 @@ height: 120px;
 
 }
 
-        .news-link{
+        .home .news-link{
 
           .news-img-wrapper{
             width: 100%;
@@ -380,7 +380,7 @@ height: 120px;
     width: 100%;
     height: 200px;
   }
-  .news-section{
+  .home .news-section{
     background-image: url(../img/bg-pink.png);
     background-size: cover;
   }

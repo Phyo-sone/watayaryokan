@@ -261,7 +261,7 @@ padding-right: 50px;
       
 
     }
-    .news-ttl{
+    .home .news-ttl{
       position: relative;
       padding-top: 0;
  display: flex;
@@ -273,7 +273,7 @@ padding-right: 50px;
       }
 
     }
-    .news-ttl::after{
+    .home .news-ttl::after{
       content: "";
       background-image: url(../img/news-icon.png);
       background-size: contain;
